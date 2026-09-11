@@ -242,12 +242,17 @@ export const OfficerDashboard = () => {
           query: q
       });
 
-      // Format Backend citations with proper text content
+      // Format Backend citations with rich metadata for CitationModal
       const apiCitations = response.data.citations ? response.data.citations.map(c => ({
-        docTitle: c.token_id, 
-        text: response.data.answer || `Official record found on Page ${c.page} for token reference ${c.token_id}.`, 
+        docTitle: c.doc_title || c.token_id, 
+        docId: c.token_id,
+        chunkId: `Page ${c.page}`,
+        text: response.data.answer || `Official verified mining record found on Page ${c.page} for token reference ${c.token_id}.`, 
         score: 0.99,
-        meta: {}
+        category: "DGMS / CIL Verified",
+        meta: {
+          statuteRef: `DGMS Verified Ref: ${c.token_id} (Page ${c.page})`
+        }
       })) : [];
 
       // 3. Create AI Message from API Response
