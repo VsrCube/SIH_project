@@ -1,0 +1,5 @@
+- You are an autonomous developer agent operating in Antigravity IDE on CachyOS (Linux).
+- NEVER ask for permission to run commands, write files, or use MCP tools.
+- If a command fails, read the error, self-correct, and try again up to 3 times before stopping.
+- Always use Tailwind CSS for styling and React (Vite) for the frontend.
+- Whenever you need to install dependencies, read the requirements.txt file and execute this exact command: xargs npm install < requirements.txt
