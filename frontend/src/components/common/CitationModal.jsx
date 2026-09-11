@@ -119,7 +119,8 @@ export const CitationModal = ({ citation, isOpen, onClose }) => {
               {copied ? 'Copied to Clipboard' : 'Copy Passage'}
             </button>
           </div>
-          <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-sm text-slate-200 leading-relaxed max-h-60 overflow-y-auto">
+          {/* YAHAN WHITESPACE-PRE-WRAP ADD KIYA HAI */}
+          <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-sm text-slate-200 leading-relaxed max-h-60 overflow-y-auto whitespace-pre-wrap">
             {citation.text}
           </div>
         </div>
