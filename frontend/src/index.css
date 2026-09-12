@@ -56,7 +56,9 @@
 }
 
 .theme-green-chat-bg {
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 45%, #f0fdf4 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(248, 250, 252, 0.75) 45%, rgba(240, 253, 244, 0.82) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: #064e3b;
 }
 
@@ -89,7 +91,9 @@
 }
 
 .theme-dark-amber-chat-bg {
-  background: radial-gradient(circle at 50% 0%, #1c1813 0%, #13100d 45%, #0a0807 100%);
+  background: radial-gradient(circle at 50% 0%, rgba(28, 24, 19, 0.78) 0%, rgba(19, 16, 13, 0.82) 45%, rgba(10, 8, 7, 0.88) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   color: #f5f5f4;
 }
 

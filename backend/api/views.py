@@ -28,7 +28,7 @@ def query_ai(request):
     ai_answer, cited_token_ids = generate_structured_grounded_answer(
         query=raw_query,
         chroma_chunks=chroma_chunks,
-        model_name="gemini-2.5-flash"
+        model_name="gemini-3.6-flash"
     )
 
     # -------------------------------------------------------------
@@ -81,6 +81,6 @@ def query_ai(request):
             "anti_hallucination_verified": not hallucination_detected,
             "vector_store": "ChromaDB (768-D)",
             "verification_db": "PostgreSQL / Master DB",
-            "model": "gemini-2.5-flash"
+            "model": "gemini-3.6-flash"
         }
     })
